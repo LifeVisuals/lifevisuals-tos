@@ -17,25 +17,26 @@
         <div class="orb orb-2"></div>
         <div class="orb orb-3"></div>
         <div class="grid"></div>
+        <div class="noise"></div>
     </div>
 
     <header class="header">
         <div class="container header-inner">
-            <div class="logo">
+            <a href="#" class="logo">
                 <img src="logo.png" alt="Life Visuals" class="logo-img">
                 <span class="logo-text">LIFE VISUALS</span>
-            </div>
+            </a>
             <nav class="nav">
-                <a href="#terms" class="nav-item">Условия</a>
-                <a href="#privacy" class="nav-item">Конфиденциальность</a>
-                <a href="#team" class="nav-item">Команда</a>
+                <a href="#terms" class="nav-item" data-section="terms">Условия</a>
+                <a href="#privacy" class="nav-item" data-section="privacy">Конфиденциальность</a>
+                <a href="#team" class="nav-item" data-section="team">Команда</a>
             </nav>
         </div>
     </header>
 
     <main>
         <div class="container">
-            <section class="hero">
+            <section class="hero reveal">
                 <div class="hero-logo-wrap">
                     <img src="logo.png" alt="Life Visuals" class="hero-logo">
                 </div>
@@ -43,13 +44,14 @@
                 <h1>Life Visuals</h1>
                 <p class="hero-sub">Условия использования и Политика конфиденциальности</p>
                 <div class="hero-meta">
-                    <span>v1.6</span>
+                    <span>v1.7</span>
                     <span class="dot"></span>
                     <span>24 сентября 2026</span>
                 </div>
             </section>
 
-            <article class="card" id="terms">
+            <article class="card reveal" id="terms">
+                <div class="card-shine"></div>
                 <div class="card-header">
                     <div class="card-icon">§</div>
                     <h2 class="card-title">Условия использования</h2>
@@ -161,7 +163,8 @@
                 </div>
             </article>
 
-            <article class="card" id="privacy">
+            <article class="card reveal" id="privacy">
+                <div class="card-shine"></div>
                 <div class="card-header">
                     <div class="card-icon">◉</div>
                     <h2 class="card-title">Политика конфиденциальности</h2>
@@ -212,7 +215,8 @@
                 </div>
             </article>
 
-            <article class="card" id="team">
+            <article class="card reveal" id="team">
+                <div class="card-shine"></div>
                 <div class="card-header">
                     <div class="card-icon">◈</div>
                     <h2 class="card-title">Life Visuals TEAM</h2>
@@ -254,5 +258,34 @@
             <span>OXS (Life SMP)</span>
         </div>
     </footer>
+
+    <script>
+    // Scroll reveal (inspired by open-source glass templates)
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                revealObs.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => revealObs.observe(el));
+
+    // Active nav on scroll
+    const sections = ['terms', 'privacy', 'team'];
+    const navItems = document.querySelectorAll('.nav-item');
+    const sectionObs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                navItems.forEach(n => n.classList.toggle('active', n.dataset.section === e.target.id));
+            }
+        });
+    }, { threshold: 0.25, rootMargin: '-20% 0px -50% 0px' });
+    sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) sectionObs.observe(el);
+    });
+    </script>
 </body>
 </html>
