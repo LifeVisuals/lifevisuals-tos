@@ -9,7 +9,7 @@
     <link rel="icon" href="logo.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="bg">
@@ -40,13 +40,19 @@
                 <div class="hero-logo-wrap">
                     <img src="logo.png" alt="Life Visuals" class="hero-logo">
                 </div>
-                <div class="hero-badge">Legal</div>
+                <div class="hero-badge">Visual Client · Legal</div>
                 <h1>Life Visuals</h1>
                 <p class="hero-sub">Условия использования и Политика конфиденциальности</p>
                 <div class="hero-meta">
-                    <span>v1.7</span>
+                    <span>v1.8</span>
                     <span class="dot"></span>
                     <span>24 сентября 2026</span>
+                </div>
+                <div class="hero-chips">
+                    <span class="chip">PURE VISUAL</span>
+                    <span class="chip">NO CHEATS</span>
+                    <span class="chip">AS IS</span>
+                    <span class="chip">CLIENT-SIDE</span>
                 </div>
             </section>
 
@@ -55,6 +61,7 @@
                 <div class="card-header">
                     <div class="card-icon">§</div>
                     <h2 class="card-title">Условия использования</h2>
+                    <span class="card-status">ENABLED</span>
                 </div>
                 <div class="card-body">
                     <section class="block">
@@ -168,6 +175,7 @@
                 <div class="card-header">
                     <div class="card-icon">◉</div>
                     <h2 class="card-title">Политика конфиденциальности</h2>
+                    <span class="card-status">ENABLED</span>
                 </div>
                 <div class="card-body">
                     <section class="block">
@@ -260,7 +268,6 @@
     </footer>
 
     <script>
-    // Scroll reveal (inspired by open-source glass templates)
     const reveals = document.querySelectorAll('.reveal');
     const revealObs = new IntersectionObserver((entries) => {
         entries.forEach(e => {
@@ -272,7 +279,6 @@
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
     reveals.forEach(el => revealObs.observe(el));
 
-    // Active nav on scroll
     const sections = ['terms', 'privacy', 'team'];
     const navItems = document.querySelectorAll('.nav-item');
     const sectionObs = new IntersectionObserver((entries) => {
