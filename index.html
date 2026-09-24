@@ -54,6 +54,33 @@
                     <span class="chip">AS IS</span>
                     <span class="chip">CLIENT-SIDE</span>
                 </div>
+
+                <div class="srv-hud reveal visible" id="server-status">
+                    <div class="srv-top">
+                        <span class="srv-dot" id="srv-dot"></span>
+                        <span class="srv-name">LIFE SMP</span>
+                        <span class="srv-addr">d1.proxify.host:26188</span>
+                    </div>
+                    <div class="srv-grid">
+                        <div class="srv-cell">
+                            <span class="srv-label">STATUS</span>
+                            <span class="srv-val" id="srv-online">…</span>
+                        </div>
+                        <div class="srv-cell">
+                            <span class="srv-label">PLAYERS</span>
+                            <span class="srv-val" id="srv-players">…</span>
+                        </div>
+                        <div class="srv-cell">
+                            <span class="srv-label">PING</span>
+                            <span class="srv-val" id="srv-ping">…</span>
+                        </div>
+                        <div class="srv-cell">
+                            <span class="srv-label">VERSION</span>
+                            <span class="srv-val" id="srv-ver">…</span>
+                        </div>
+                    </div>
+                </div>
+
             </section>
 
             <article class="card reveal" id="terms">
@@ -293,5 +320,6 @@
         if (el) sectionObs.observe(el);
     });
     </script>
+    <script src="status.js"></script>
 </body>
 </html>
