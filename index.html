@@ -188,8 +188,21 @@
           el.innerHTML = '<p style="padding:16px 0;color:#f07178">Не удалось загрузить текст. Обновите страницу (Ctrl+F5).</p>';
         }
       }
+      async function fillTerms() {
+        const el = document.querySelector('#terms .card-body');
+        if (!el) return;
+        try {
+          const [a, b] = await Promise.all([
+            fetch('terms-a.html?_=' + Date.now()).then(r => { if (!r.ok) throw new Error('a'); return r.text(); }),
+            fetch('terms-b.html?_=' + Date.now()).then(r => { if (!r.ok) throw new Error('b'); return r.text(); }),
+          ]);
+          el.innerHTML = a + b;
+        } catch (e) {
+          el.innerHTML = '<p style="padding:16px 0;color:#f07178">Не удалось загрузить условия. Обновите страницу (Ctrl+F5).</p>';
+        }
+      }
       await Promise.all([
-        fill('#terms .card-body', 'terms-body.html'),
+        fillTerms(),
         fill('#privacy .card-body', 'privacy-body.html'),
       ]);
     })();
