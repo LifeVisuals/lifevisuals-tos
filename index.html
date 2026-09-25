@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Условия использования — Life Visuals</title>
-    <meta name="description" content="Официальные условия использования и политика конфиденциальности Life Visuals">
+    <title>Life Visuals — Closed Beta · Условия</title>
+    <meta name="description" content="Life Visuals — закрытое бета-тестирование открыто. Официальные условия и политика конфиденциальности.">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="logo.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,8 +16,19 @@
         <div class="orb orb-1"></div>
         <div class="orb orb-2"></div>
         <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
         <div class="grid"></div>
+        <div class="scanlines"></div>
         <div class="noise"></div>
+        <div class="vignette"></div>
+    </div>
+
+    <div class="beta-strip" id="beta-strip">
+        <div class="beta-strip-inner">
+            <span class="beta-live"><i></i> LIVE</span>
+            <span class="beta-strip-text">Закрытое бета-тестирование <strong>Life Visuals</strong> открыто</span>
+            <a href="#beta" class="beta-strip-cta">Подробнее →</a>
+        </div>
     </div>
 
     <header class="header">
@@ -25,8 +36,10 @@
             <a href="#" class="logo">
                 <img src="logo.png" alt="Life Visuals" class="logo-img">
                 <span class="logo-text">LIFE VISUALS</span>
+                <span class="logo-beta">BETA</span>
             </a>
             <nav class="nav">
+                <a href="#beta" class="nav-item" data-section="beta">Бета</a>
                 <a href="#terms" class="nav-item" data-section="terms">Условия</a>
                 <a href="#privacy" class="nav-item" data-section="privacy">Конфиденциальность</a>
                 <a href="#team" class="nav-item" data-section="team">Команда</a>
@@ -38,21 +51,76 @@
         <div class="container">
             <section class="hero">
                 <div class="hero-logo-wrap">
+                    <div class="hero-ring"></div>
+                    <div class="hero-ring hero-ring-2"></div>
                     <img src="logo.png" alt="Life Visuals" class="hero-logo">
                 </div>
-                <div class="hero-badge">Visual Client · Legal</div>
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Visual Client · Closed Beta
+                </div>
                 <h1>Life Visuals</h1>
-                <p class="hero-sub">Условия использования и Политика конфиденциальности</p>
+                <p class="hero-sub">Премиум visual-клиент для Minecraft · Fabric 1.21.4–1.21.11</p>
                 <div class="hero-meta">
                     <span>v1.9</span>
                     <span class="dot"></span>
-                    <span>24 сентября 2026</span>
+                    <span>25 сентября 2026</span>
+                    <span class="dot"></span>
+                    <span class="meta-beta">CLOSED BETA</span>
                 </div>
                 <div class="hero-chips">
                     <span class="chip">PURE VISUAL</span>
                     <span class="chip">NO CHEATS</span>
                     <span class="chip">AS IS</span>
                     <span class="chip">CLIENT-SIDE</span>
+                    <span class="chip chip-beta">BETA OPEN</span>
+                </div>
+
+                <div class="beta-announce" id="beta">
+                    <div class="beta-announce-glow"></div>
+                    <div class="beta-announce-corners">
+                        <i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
+                    </div>
+                    <div class="beta-announce-top">
+                        <span class="beta-tag">
+                            <span class="beta-tag-pulse"></span>
+                            ANNOUNCEMENT
+                        </span>
+                        <span class="beta-status-pill">CLOSED BETA · OPEN</span>
+                    </div>
+                    <h2 class="beta-title">Открыт набор в закрытую бету</h2>
+                    <p class="beta-lead">
+                        Life Visuals переходит в стадию <strong>Closed Beta</strong>.
+                        Мы открываем доступ ограниченному кругу тестеров — чтобы довести клиент до идеала перед публичным релизом.
+                    </p>
+                    <div class="beta-features">
+                        <div class="beta-feat">
+                            <span class="beta-feat-icon">◈</span>
+                            <div>
+                                <strong>Только визуалы</strong>
+                                <span>HUD, эффекты, анимации — без читов и преимуществ</span>
+                            </div>
+                        </div>
+                        <div class="beta-feat">
+                            <span class="beta-feat-icon">◆</span>
+                            <div>
+                                <strong>Fabric 1.21.4–1.21.11</strong>
+                                <span>Актуальные версии Minecraft</span>
+                            </div>
+                        </div>
+                        <div class="beta-feat">
+                            <span class="beta-feat-icon">◇</span>
+                            <div>
+                                <strong>Обратная связь</strong>
+                                <span>Баги и идеи — напрямую команде</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="beta-actions">
+                        <a href="#team" class="btn-beta primary">Связаться с командой</a>
+                        <a href="#terms" class="btn-beta ghost">Читать условия</a>
+                    </div>
+                    <p class="beta-note">Доступ выдаётся вручную. Места ограничены. Участие = согласие с Условиями использования.</p>
                 </div>
 
                 <div class="srv-hud" id="server-status">
@@ -145,7 +213,7 @@
                             </div>
                         </div>
                     </div>
-                    <p class="team-note">Официальная команда разработки Life Visuals и партнёр проекта Life SMP.</p>
+                    <p class="team-note">Официальная команда разработки Life Visuals и партнёр проекта Life SMP. По вопросам беты — пишите в Discord.</p>
                 </div>
             </article>
         </div>
@@ -158,12 +226,14 @@
             <span class="sep">·</span>
             <span>Coffeyka</span>
             <span class="sep">·</span>
-            <span>OXS (Life SMP #крутой)</span>
+            <span>OXS</span>
+            <span class="sep">·</span>
+            <span class="footer-beta">CLOSED BETA</span>
         </div>
     </footer>
 
     <script>
-    const sections = ['terms', 'privacy', 'team'];
+    const sections = ['beta', 'terms', 'privacy', 'team'];
     const navItems = document.querySelectorAll('.nav-item');
     const sectionObs = new IntersectionObserver((entries) => {
         entries.forEach(e => {
@@ -171,7 +241,7 @@
                 navItems.forEach(n => n.classList.toggle('active', n.dataset.section === e.target.id));
             }
         });
-    }, { threshold: 0.25, rootMargin: '-20% 0px -50% 0px' });
+    }, { threshold: 0.2, rootMargin: '-15% 0px -55% 0px' });
     sections.forEach(id => {
         const el = document.getElementById(id);
         if (el) sectionObs.observe(el);
